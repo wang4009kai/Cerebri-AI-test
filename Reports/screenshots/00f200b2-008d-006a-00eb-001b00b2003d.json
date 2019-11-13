@@ -1,0 +1,1 @@
+{"description":"submit button should not be enabled if all but phone is in wrong format|angular-demo-app App","passed":true,"pending":false,"os":"Mac OS X","instanceId":15434,"browser":{"name":"chrome","version":"78.0.3904.97"},"message":"Passed.","trace":"","browserLogs":[],"screenShotFile":"00f200b2-008d-006a-00eb-001b00b2003d.png","timestamp":1573608801610,"duration":4292}

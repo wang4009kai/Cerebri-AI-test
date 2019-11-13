@@ -2,6 +2,7 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
+var HtmlReporter = require('protractor-beautiful-reporter');
 
 exports.config = {
   allScriptsTimeout: 11000,
@@ -24,5 +25,10 @@ exports.config = {
       project: 'e2e/tsconfig.e2e.json'
     });
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+
+    // Add a screenshot reporter and store screenshots to `/Reports/screenshots`.
+    jasmine.getEnv().addReporter(new HtmlReporter({
+      baseDirectory: 'Reports/screenshots'
+    }).getJasmine2Reporter());
   }
 };

@@ -1,0 +1,1 @@
+{"description":"submit button should not be enabled if all but state is too short|angular-demo-app App","passed":true,"pending":false,"os":"Mac OS X","instanceId":15434,"browser":{"name":"chrome","version":"78.0.3904.97"},"message":"Passed.","trace":"","browserLogs":[],"screenShotFile":"002a00b3-00ab-0006-0011-002f00a7009f.png","timestamp":1573608828555,"duration":3995}

@@ -1,0 +1,1 @@
+{"description":"submit button should not be enabled if all but first name is too short|angular-demo-app App","passed":true,"pending":false,"os":"Mac OS X","instanceId":15434,"browser":{"name":"chrome","version":"78.0.3904.97"},"message":"Passed.","trace":"","browserLogs":[],"screenShotFile":"005d0068-000c-0045-00c0-00d60042000a.png","timestamp":1573608755884,"duration":4348}

@@ -1,0 +1,1 @@
+{"description":"submit button should not be enabled if all but zipcode is in wrong format|angular-demo-app App","passed":true,"pending":false,"os":"Mac OS X","instanceId":15434,"browser":{"name":"chrome","version":"78.0.3904.97"},"message":"Passed.","trace":"","browserLogs":[],"screenShotFile":"006200c0-00c5-0097-0081-00b5004800ee.png","timestamp":1573608856303,"duration":4426}

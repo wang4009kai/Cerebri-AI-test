@@ -1,0 +1,1 @@
+{"description":"submit button should not be enabled if all but first name is too long|angular-demo-app App","passed":true,"pending":false,"os":"Mac OS X","instanceId":15434,"browser":{"name":"chrome","version":"78.0.3904.97"},"message":"Passed.","trace":"","browserLogs":[],"screenShotFile":"005c00c0-00d8-00d3-00bb-005b00e300fe.png","timestamp":1573608760722,"duration":4455}

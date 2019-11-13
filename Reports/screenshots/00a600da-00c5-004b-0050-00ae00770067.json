@@ -1,0 +1,1 @@
+{"description":"submit button should not be enabled if all but first name is empty|angular-demo-app App","passed":true,"pending":false,"os":"Mac OS X","instanceId":15434,"browser":{"name":"chrome","version":"78.0.3904.97"},"message":"Passed.","trace":"","browserLogs":[],"screenShotFile":"00a600da-00c5-004b-0050-00ae00770067.png","timestamp":1573608750760,"duration":4651}

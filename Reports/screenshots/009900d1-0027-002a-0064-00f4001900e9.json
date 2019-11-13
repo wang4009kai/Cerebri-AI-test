@@ -1,0 +1,1 @@
+{"description":"submit button should not be enabled if all but gender is empty|angular-demo-app App","passed":true,"pending":false,"os":"Mac OS X","instanceId":15434,"browser":{"name":"chrome","version":"78.0.3904.97"},"message":"Passed.","trace":"","browserLogs":[],"screenShotFile":"009900d1-0027-002a-0064-00f4001900e9.png","timestamp":1573608780376,"duration":3494}

@@ -1,0 +1,1 @@
+{"description":"submit button should not be enabled if all but zipcode is too short|angular-demo-app App","passed":true,"pending":false,"os":"Mac OS X","instanceId":15434,"browser":{"name":"chrome","version":"78.0.3904.97"},"message":"Passed.","trace":"","browserLogs":[],"screenShotFile":"009700aa-00e5-00af-0084-00fb004c006c.png","timestamp":1573608847072,"duration":3655}

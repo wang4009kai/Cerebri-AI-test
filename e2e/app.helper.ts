@@ -10,12 +10,14 @@ export class AppHelper {
   // Get text and remove extra newlines from given web element after the element is loaded.
   getText(elem) {
     this.smartWait(elem);
+    this.scrollToView(elem);
     return (elem.getText());
   }
 
   // Wait until the web element is visible and enabled and then click on it.
   click(elem) {
     this.smartWait(elem);
+    this.scrollToView(elem);
     browser.wait(ExpectedConditions.elementToBeClickable(elem), 3000);
     elem.click();
   }
@@ -31,6 +33,7 @@ export class AppHelper {
   // Wait until the web element is visible in DOM and send input.
   sendKeys(elem, input) {
     this.smartWait(elem);
+    this.scrollToView(elem);
     elem.sendKeys(input);
   }
 
