@@ -1,0 +1,27 @@
+label{
+  color: #24408f;
+}
+
+h4 {
+  color: #ed0281;
+}
+
+.form-group input {
+  width: 60em;
+}
+
+.test-form {
+  margin-left: 5em;
+}
+
+button {
+  cursor: pointer;
+}
+
+div.male-input, div.female-input {
+  margin-left: 0em;
+}
+
+.custom-radio .male-input input, .custom-radio .female-input input  {
+  width: 2rem;
+}

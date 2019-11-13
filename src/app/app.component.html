@@ -1,0 +1,128 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid test-form">
+  <h4> Welcome to Cerebri AI</h4>
+  <form [formGroup]="simpleForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label class="firstname-label">First Name</label>
+      <input [class.is-invalid]="firstName.invalid && firstName.touched" formControlName="firstName" type="text"
+        class="form-control first-name-input">
+
+      <div *ngIf="firstName.invalid && firstName.touched">
+        <small *ngIf="firstName.errors?.required" class="text-danger firstname-required">First Name is required</small>
+        <small *ngIf="firstName.errors?.minlength" class="text-danger firstname-min-length">First Name must be at least
+          3 characters</small>
+        <small *ngIf="firstName.errors?.maxlength" class="text-danger firstname-max-length">First Name should not be
+          more than 20 characters</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="lastname-label">Last Name</label>
+      <input [class.is-invalid]="lastName.invalid && lastName.touched" formControlName="lastName" type="text"
+        class="form-control last-name-input">
+
+      <div *ngIf="lastName.invalid && lastName.touched">
+        <small *ngIf="lastName.errors?.required" class="text-danger lastname-required">Last Name is required</small>
+        <small *ngIf="lastName.errors?.minlength" class="text-danger lastname-min-length">Last Name must be at least 3
+          characters</small>
+        <small *ngIf="lastName.errors?.maxlength" class="text-danger lastname-max-length">Last Name should not be more
+          than 20 characters</small>
+      </div>
+    </div>
+
+    <div class="form-group custom-radio">
+      <div>
+        <label class="gender-label">Gender</label>
+      </div>
+      <div class="male-input" >
+        <input type="radio" value="male" name="gender" formControlName="gender">
+        <label class="custom-control-label" for="male">Male</label>
+      </div>  
+      <div class="female-input">
+        <input type="radio" value="female" name="gender" formControlName="gender">
+        <label class="custom-control-label" for="female">Female</label>
+      </div>     
+    </div>
+
+    <div class="form-group">
+      <label class="email-label">Email</label>
+      <input [class.is-invalid]="email.invalid && email.touched" formControlName="email" type="text"
+        class="form-control email-input">
+      <div *ngIf="email.invalid && email.touched">
+        <small *ngIf="email.errors?.required" class="text-danger email-required">Email is required</small>
+        <small *ngIf="email.errors?.pattern" class="text-danger email-format">Email must match the email format</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="phone-number-label">Phone Number</label>
+      <input [class.is-invalid]="phone.invalid && phone.touched" formControlName="phone" type="text"
+        class="form-control phone-input">
+      <div *ngIf="phone.invalid && phone.touched">
+        <small *ngIf="phone.errors?.required" class="text-danger phone-required">Phone number is required</small>
+        <small *ngIf="phone.errors?.pattern" class="text-danger phone-pattern">Phone number must match the pattern ie.
+          123-456-7890</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div>
+          <label class="qualification-label">Qualification</label>
+          <select formControlName="qualification" id="qualifications">
+              <option *ngFor="let qualification of qualifications; let i = index" [value]="qualifications[i].name">
+                {{qualifications[i].name}}
+              </option>
+          </select>
+      </div>      
+    </div>
+
+    <div formGroupName="address" class="input-address">
+      <div class="form-group">
+        <label class="city-label">City</label>
+        <input [class.is-invalid]="city.invalid && city.touched" formControlName="city" type="text"
+          class="form-control city-input">
+        <div *ngIf="city.invalid && city.touched">
+          <small *ngIf="city.errors?.required" class="text-danger city-required">City is required</small>
+          <small *ngIf="city.errors?.pattern" class="text-danger city-pattern">City should not contain numeric
+            digits</small>
+          <small *ngIf="city.errors?.minlength" class="text-danger city-min-length">City should have at least 3
+            letters</small>
+          <small *ngIf="city.errors?.maxlength" class="text-danger city-max-length">City should not exceed 20 characters
+            length</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="state-label">State</label>
+        <input [class.is-invalid]="state.invalid && state.touched" formControlName="state" type="text"
+          class="form-control state-input">
+        <div *ngIf="state.invalid && state.touched">
+          <small *ngIf="state.errors?.required" class="text-danger state-required">State is required</small>
+          <small *ngIf="state.errors?.pattern" class="text-danger state-format">State should not contain numeric
+            digits</small>
+          <small *ngIf="state.errors?.minlength" class="text-danger state-min-length">State should have at least 3
+            letters</small>
+          <small *ngIf="state.errors?.maxlength" class="text-danger state-max-length">State should not exceed 20
+            characters length</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="zipcode-label">Zipcode</label>
+        <input [class.is-invalid]="zipcode.invalid && zipcode.touched" formControlName="zipcode" type="text"
+          class="form-control zipcode-input">
+        <div *ngIf="zipcode.invalid && zipcode.touched">
+          <small *ngIf="zipcode.errors?.required" class="text-danger zipcode-required">Zipcode is required</small>
+          <small *ngIf="zipcode.errors?.minlength" class="text-danger zipcode-min-length">Zipcode should have at least 5
+            digits</small>
+          <small *ngIf="zipcode.errors?.maxlength" class="text-danger zipcode-max-length">Zipcode should not have more
+            than 5 digits</small>
+          <small *ngIf="zipcode.errors?.pattern" class="text-danger zipcode-pattern">ZipCode should have digits only ie.
+            12345</small>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary form-submit" type="submit" [disabled]="!simpleForm.valid">Submit</button>
+    <button class="btn btn-primary form-cancel" type="reset" (click)="onReset()">Reset Form</button>
+  </form>
+  {{simpleForm.value | json}}
+</div>
